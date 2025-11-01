@@ -2,7 +2,7 @@
 Версия: 1.1 
 - Владелец: vfhc26 
 - Команда: ???
-    - Developer:
+    - Developer: Ononim03(Тямур)
     - Developer:
     - Developer:
 
