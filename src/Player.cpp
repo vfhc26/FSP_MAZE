@@ -4,9 +4,7 @@
 
 #include "Player.h"
 
-Player::Player() {
-    x = y = coin_count = move_count = 0;
-}
+Player::Player() { x = y = coin_count = move_count = 0; }
 
 Player::Player(int x, int y) {
     this->x = x;
@@ -15,7 +13,7 @@ Player::Player(int x, int y) {
 }
 
 bool Player::Up() {
-// надо сделать проверки на стенки и прочие штуки
+    // надо сделать проверки на стенки и прочие штуки
     move_count++;
     y++;
     return true;
@@ -38,11 +36,17 @@ bool Player::Right() {
     x++;
     return true;
 }
-
-CellType Player::checkCell() {
-
+void Player::setStartPosition(int y, int x) {
+    this->x = x;
+    this->y = y;
 }
 
-CellType Player::checkCell(Direction dir) {
+CellType Player::checkCell() {
+    // Заглушка: пока нет доступа к полю, возвращаем пустую клетку
+    return CellType::Empty;
+}
 
+CellType Player::checkCell(Direction /*dir*/) {
+    // Заглушка: пока нет доступа к полю, возвращаем пустую клетку
+    return CellType::Empty;
 }

@@ -4,9 +4,9 @@
 
 #ifndef FSP_MAZE_PLAYER_H
 #define FSP_MAZE_PLAYER_H
-#include "Field.h"
+#include "Cell.h"
 
-class Player {
+class Player{
 private:
     int x, y;
     int coin_count;
@@ -18,6 +18,7 @@ public:
     bool Down();
     bool Left();
     bool Right();
+    void setStartPosition(int y, int x);
     CellType checkCell();
     CellType checkCell(Direction);
 };
